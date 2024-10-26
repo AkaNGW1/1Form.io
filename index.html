@@ -1,0 +1,86 @@
+
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Site</title>
+    <style>
+        h1 {
+            margin: 0; /* Usunięcie domyślnego marginesu */
+            color: rgb(72, 159, 230);
+            text-align: center; /* Wyśrodkowanie nagłówka */
+        }
+        p { color: red; }
+        th { color: green; }
+        label { color: rgb(0, 183, 255); }
+        body {
+            background-color: rgb(71, 69, 69);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ustala wysokość na 100% wysokości okna */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            flex-direction: column; /* Ustawienie elementów w kolumnie */
+            align-items: center; /* Wyśrodkowanie elementów */
+        }
+        .form-container {
+            display: inline-block; /* Umożliwia ramkę wokół formularza */
+            border: 2px solid rgb(28, 28, 187); /* Niebieska ramka */
+            padding: 20px;
+            border-radius: 25px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgb(103, 105, 99); /* Tło formularza */
+            text-align: left; /* Wyrównanie tekstu w formularzu */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formularz</h1>
+        <form class="form-container">
+            <label for="tekst">Wpisz Imię i Nazwisko</label><br>
+            <input type="text" id="tekst" name="tekst" placeholder="Imię i Nazwisko" required>
+            <br><br>
+   
+            <label for="email">Wpisz adres E-Mail</label><br>
+            <input type="email" id="email" name="email" placeholder="<Twoja nazwa>@gmail.con" required>
+            <br><br>
+   
+            <label for="phone">Wpisz swój Numer Telefonu</label><br>
+            <input type="tel" id="phone" name="phone" placeholder="+48 123 456 789" required>
+            <br><br>
+   
+            <label for="text">Wpisz swoje Hasło</label><br>
+            <input type="text" id="text" name="text" placeholder="Hasło..." required>
+            <br><br>
+
+            <label>Wybierz swoją Płeć:</label><br>
+            <label for="opt1">Mężczyzna</label>
+            <input type="radio" id="opt1" name="opt" value="Mężczyzna" required>
+            <label for="opt2">Kobieta</label>
+            <input type="radio" id="opt2" name="opt" value="Kobieta" required>
+            <br><br>
+
+            <label for="options">Wybierz kraj</label><br>
+            <select id="options" name="options" required>
+                <option value="" disabled selected>-- Wybierz kraj --</option>
+                <option value="opcja1">Etiopia</option>
+                <option value="opcja2">Polska</option>
+                <option value="opcja3">USA</option>
+                <option value="opcja4">UK</option>
+                <option value="opcja5">Mołdawia</option>
+            </select><br><br>
+
+            <label for="check">Zaznaczając akceptujesz Regulamin</label><br>
+            <input type="checkbox" id="check" name="check" required>
+            <br><br>
+
+            <input type="submit" value="Wyślij">
+            <input type="reset" value="Resetuj">
+        </form>
+    </div>
+</body>
+</html>
